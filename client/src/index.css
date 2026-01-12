@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 20% 97%;
+  --foreground: 20 10% 20%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 20 10% 20%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 10% 20%;
+  
+  --primary: 25 30% 35%;
+  --primary-foreground: 40 20% 97%;
+  
+  --secondary: 40 10% 90%;
+  --secondary-foreground: 20 10% 20%;
+  
+  --muted: 40 10% 94%;
+  --muted-foreground: 25 10% 45%;
+  
+  --accent: 30 20% 85%;
+  --accent-foreground: 20 10% 20%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 30 15% 88%;
+  --input: 30 15% 88%;
+  --ring: 25 30% 35%;
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-serif selection:bg-primary/10 selection:text-primary;
+  }
+  
+  /* Custom Scrollbar for a cleaner look */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
