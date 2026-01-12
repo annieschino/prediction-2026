@@ -10,7 +10,7 @@ export function AudioPlayer() {
 
   useEffect(() => {
     // Create audio element only once
-    audioRef.current = new Audio("/assets/audio/music.mp3"); 
+    audioRef.current = new Audio(`${import.meta.env.BASE_URL}assets/audio/music.mp3`); 
     audioRef.current.loop = true;
     audioRef.current.volume = 0.18;
 
